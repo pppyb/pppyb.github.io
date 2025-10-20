@@ -5,213 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yibo Peng (彭艺博)</title>
     <meta name="description" content="Yibo Peng's Homepage - Research on Retrieval-Augmented Generation (RAG), long context models, and code generation at Carnegie Mellon University.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Times,serif" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
-        .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e5e5; z-index: 1000; padding: 1rem 0; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.5rem; font-weight: 700; color: #333; text-decoration: none; }
-        .nav-menu { display: flex; list-style: none; gap: 2rem; }
-        .nav-menu a { color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        .nav-menu a:hover { color: #333; }
-        .main-content { margin-top: 80px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .hero { padding: 4rem 0; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
-        .hero .subtitle { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
-        .hero .description { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; }
-        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; color: white; text-decoration: none; transition: all 0.3s ease; }
-        .social-links a:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
-        .section { padding: 4rem 0; }
-        .section:nth-child(even) { background: #f8f9fa; }
-        .section-title { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #333; }
-        .profile-section { padding: 4rem 0; background: white; }
-        .profile-grid { display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: center; }
-        .profile-image { width: 300px; height: 300px; border-radius: 20px; object-fit: cover; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
-        .profile-info h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #333; }
-        .profile-info .title { font-size: 1.3rem; color: #666; margin-bottom: 1rem; }
-        .profile-info .bio { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 2rem; }
-        .publication-item { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); margin-bottom: 2rem; display: flex; gap: 2rem; align-items: flex-start; }
-        .publication-image { width: 200px; height: 120px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
-        .publication-content h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
-        .publication-authors { color: #666; margin-bottom: 0.5rem; }
-        .publication-venue { color: #667eea; font-weight: 600; margin-bottom: 1rem; }
-        .publication-links { display: flex; gap: 1rem; }
-        .publication-links a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        .publication-links a:hover { color: #333; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .profile-grid { grid-template-columns: 1fr; text-align: center; }
-            .profile-image { width: 250px; height: 250px; margin: 0 auto; }
-            .publication-item { flex-direction: column; }
-            .publication-image { width: 100%; height: 200px; }
+        body { 
+            font-family: 'Times', serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: white;
         }
+        h1 { font-size: 2.2em; margin-bottom: 0.5em; color: #000; }
+        h2 { font-size: 1.5em; margin: 2em 0 1em 0; color: #000; border-bottom: 1px solid #ccc; padding-bottom: 0.3em; }
+        h3 { font-size: 1.2em; margin: 1.5em 0 0.5em 0; color: #000; }
+        p { margin-bottom: 1em; }
+        .header { text-align: center; margin-bottom: 3em; }
+        .contact { text-align: center; margin: 1em 0; }
+        .contact a { color: #0066cc; text-decoration: none; margin: 0 10px; }
+        .contact a:hover { text-decoration: underline; }
+        .publication { margin-bottom: 2em; padding: 1em; border-left: 3px solid #f0f0f0; }
+        .publication-title { font-weight: bold; margin-bottom: 0.5em; }
+        .publication-authors { color: #666; margin-bottom: 0.3em; }
+        .publication-venue { color: #0066cc; font-weight: bold; margin-bottom: 0.5em; }
+        .publication-links a { color: #0066cc; text-decoration: none; margin-right: 15px; }
+        .publication-links a:hover { text-decoration: underline; }
+        .cv-section { text-align: center; margin: 3em 0; }
+        .cv-section a { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            background: #f8f8f8; 
+            color: #333; 
+            text-decoration: none; 
+            border: 1px solid #ddd; 
+            border-radius: 3px;
+        }
+        .cv-section a:hover { background: #e8e8e8; }
+        .social { text-align: center; margin: 2em 0; }
+        .social a { color: #666; text-decoration: none; margin: 0 15px; font-size: 1.2em; }
+        .social a:hover { color: #000; }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Yibo Peng</a>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link active">about</a></li>
-                <li><a href="#publications" class="nav-link">publications</a></li>
-                <li><a href="#cv" class="nav-link">cv</a></li>
-            </ul>
+    <div class="header">
+        <h1>Yibo Peng (彭艺博)</h1>
+        <p><em>Péng Yìbó (pronounced "penɡ EE-bor")</em></p>
+    </div>
+
+    <div class="contact">
+        <p>Email: <a href="mailto:yibopcmu@gmail.com">yibopcmu@gmail.com</a> | 
+           <a href="https://github.com/pppyb">GitHub</a> | 
+           <a href="https://www.linkedin.com/in/yibo-peng-cs/">LinkedIn</a> | 
+           <a href="https://x.com/BrynnPeng">Twitter</a> | 
+           <a href="https://scholar.google.com/citations?user=hyU4axsAAAAJ">Google Scholar</a></p>
+    </div>
+
+    <h2>About</h2>
+    <p>I recently received my Master's degree in Artificial Intelligence Engineering from Carnegie Mellon University. During my studies, I had the privilege of being advised by Prof. <a href="https://dpfried.github.io/">Daniel Fried</a>, with a focus on Code Generation and Retrieval-Augmented Generation (RAG) (<a href="https://openreview.net/pdf?id=pmcWo9DtDw">paper</a>).</p>
+    
+    <p>My research interests lie in addressing the core challenges for AI agents: enhancing their multimodal reasoning capabilities in complex environments, optimizing the efficiency of multi-agent collaboration, and ensuring the safety of their behavior.</p>
+    
+    <p>I am actively seeking Ph.D. opportunities for the Fall 2026 admission cycle. If you are interested in my work or potential collaborations, please feel free to contact me via email.</p>
+
+    <h2>Selected Publications</h2>
+    
+    <div class="publication">
+        <div class="publication-title">When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?</div>
+        <div class="publication-authors"><strong><u>Yibo Peng</u></strong>*, James Song*, Lei Li*, Xinyu Yang, Mihai Christodorescu, Ravi Mangal, Corina Pasareanu, Haizhong Zheng, Beidi Chen</div>
+        <div class="publication-venue">arXiv preprint, 2025</div>
+        <div class="publication-links">
+            <a href="assets/pdf/attack_agent.pdf">Paper</a>
+            <a href="https://github.com/Infini-AI-Lab/FCV">Code</a>
         </div>
-    </nav>
+    </div>
 
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>Yibo (Brynn) Peng</h1>
-                <p class="subtitle">彭艺博 · Péng Yìbó (pronounced "penɡ EE-bor")</p>
-                <p class="description">
-                    I recently received my Master's degree in Artificial Intelligence Engineering from Carnegie Mellon University. 
-                    During my studies, I had the privilege of being advised by Prof. Daniel Fried, with a focus on Code Generation and Retrieval-Augmented Generation (RAG).
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/pppyb" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/yibo-peng-cs/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://x.com/BrynnPeng" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=hyU4axsAAAAJ" target="_blank" aria-label="Google Scholar">
-                        <i class="fab fa-google-scholar"></i>
-                    </a>
-                    <a href="mailto:yibopcmu@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <div class="publication">
+        <div class="publication-title">MMedAgent-RL: Optimizing Multi-Agent Collaboration for Multimodal Medical Reasoning</div>
+        <div class="publication-authors">Peng Xia*, Jinglu Wang*, <strong><u>Yibo Peng</u></strong>*, Kaide Zeng, Xian Wu, Xiangru Tang, Hongtu Zhu, Yun Li, Yan Lu, Huaxiu Yao</div>
+        <div class="publication-venue">arXiv preprint, 2025</div>
+        <div class="publication-links">
+            <a href="https://arxiv.org/abs/2506.00555">Paper</a>
+            <a href="https://pppyb.github.io/">Code</a>
+        </div>
+    </div>
 
-        <!-- About Section -->
-        <section id="about" class="section profile-section">
-            <div class="container">
-                <div class="profile-grid">
-                    <img src="assets/img/profile1.jpg" alt="Yibo Peng" class="profile-image">
-                    <div class="profile-info">
-                        <h2>About Me</h2>
-                        <p class="title">彭艺博</p>
-                        <p class="bio">
-                            My research interests lie in addressing the core challenges for AI agents: enhancing their multimodal reasoning capabilities in complex environments, optimizing the efficiency of multi-agent collaboration, and ensuring the safety of their behavior.
-                        </p>
-                        <p class="bio">
-                            I am actively seeking Ph.D. opportunities for the Fall 2026 admission cycle. If you are interested in my work or potential collaborations, please feel free to contact me via email: <a href="mailto:yibopcmu@gmail.com">yibopcmu@gmail.com</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="publication">
+        <div class="publication-title">Can Long-Context Language Models Solve Repository-Level Code Generation?</div>
+        <div class="publication-authors"><strong><u>Yibo Peng</u></strong>, Zora Zhiruo Wang, Daniel Fried</div>
+        <div class="publication-venue">arXiv preprint, 2025</div>
+        <div class="publication-links">
+            <a href="https://openreview.net/pdf?id=pmcWo9DtDw">Paper</a>
+            <a href="https://pppyb.github.io/">Code</a>
+        </div>
+    </div>
 
-        <!-- Publications Section -->
-        <section id="publications" class="section">
-            <div class="container">
-                <h2 class="section-title">Selected Publications</h2>
-                
-                <div class="publication-item">
-                    <img src="assets/img/code_rag.png" alt="Code Agents Safety" class="publication-image">
-                    <div class="publication-content">
-                        <h3>When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?</h3>
-                        <p class="publication-authors"><strong><u>Yibo Peng</u></strong>*, James Song*, Lei Li*, Xinyu Yang, Mihai Christodorescu, Ravi Mangal, Corina Pasareanu, Haizhong Zheng, Beidi Chen</p>
-                        <p class="publication-venue">arXiv preprint, 2025</p>
-                        <p>This paper investigates the safety implications of functionally correct patches generated by code agents, revealing potential security vulnerabilities even in seemingly correct code.</p>
-                        <div class="publication-links">
-                            <a href="assets/pdf/attack_agent.pdf" target="_blank">Paper</a>
-                            <a href="https://github.com/Infini-AI-Lab/FCV" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="cv-section">
+        <a href="assets/pdf/ra_YIBOP.pdf">Download CV</a>
+    </div>
 
-                <div class="publication-item">
-                    <img src="assets/img/mmedical.png" alt="MMedAgent-RL" class="publication-image">
-                    <div class="publication-content">
-                        <h3>MMedAgent-RL: Optimizing Multi-Agent Collaboration for Multimodal Medical Reasoning</h3>
-                        <p class="publication-authors">Peng Xia*, Jinglu Wang*, <strong><u>Yibo Peng</u></strong>*, Kaide Zeng, Xian Wu, Xiangru Tang, Hongtu Zhu, Yun Li, Yan Lu, Huaxiu Yao</p>
-                        <p class="publication-venue">arXiv preprint, 2025</p>
-                        <p>We propose a reinforcement learning framework for optimizing multi-agent collaboration in medical reasoning tasks, improving diagnostic accuracy and efficiency.</p>
-                        <div class="publication-links">
-                            <a href="https://arxiv.org/abs/2506.00555" target="_blank">Paper</a>
-                            <a href="https://pppyb.github.io/" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <img src="assets/img/code_rag.png" alt="Long-context Code Generation" class="publication-image">
-                    <div class="publication-content">
-                        <h3>Can Long-Context Language Models Solve Repository-Level Code Generation?</h3>
-                        <p class="publication-authors"><strong><u>Yibo Peng</u></strong>, Zora Zhiruo Wang, Daniel Fried</p>
-                        <p class="publication-venue">arXiv preprint, 2025</p>
-                        <p>We investigate the capabilities of long-context language models for repository-level code generation, comparing them with retrieval-augmented generation approaches.</p>
-                        <div class="publication-links">
-                            <a href="https://openreview.net/pdf?id=pmcWo9DtDw" target="_blank">Paper</a>
-                            <a href="https://pppyb.github.io/" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CV Section -->
-        <section id="cv" class="section">
-            <div class="container">
-                <h2 class="section-title">CV</h2>
-                <div style="text-align: center; padding: 2rem;">
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Download my complete CV</p>
-                    <a href="assets/pdf/ra_YIBOP.pdf" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
-                        <i class="fas fa-download" style="margin-right: 0.5rem;"></i>
-                        Download CV
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section[id]');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <div class="social">
+        <a href="https://github.com/pppyb" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/yibo-peng-cs/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/BrynnPeng" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://scholar.google.com/citations?user=hyU4axsAAAAJ" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="mailto:yibopcmu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
 </body>
 </html>
