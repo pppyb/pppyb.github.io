@@ -4,10 +4,10 @@ description: "Yibo Peng's academic website. Research on AI agents, code generati
 url: https://pppyb.github.io
 baseurl: ""
 
-# GitHub Pages settings
-markdown: kramdown
-highlighter: rouge
-theme: minima
+# GitHub Pages settings - Disabled Jekyll processing for pure HTML site
+# markdown: kramdown
+# highlighter: rouge
+# theme: minima
 
 # Exclude unnecessary files
 exclude:
