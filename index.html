@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yibo Peng (彭艺博)</title>
     <meta name="description" content="Yibo Peng's academic website - Research on AI agents, code generation, and multimodal reasoning">
+    <link rel="icon" type="image/png" href="images/west-highland-terrier.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -12,7 +13,7 @@
         
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
+            line-height: 1.5;
             color: #333;
             background: #fff;
         }
@@ -32,7 +33,7 @@
         .nav-content { 
             max-width: 900px; 
             margin: 0 auto; 
-            padding: 15px 20px; 
+            padding: 15px 12px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
@@ -56,7 +57,7 @@
         .container { 
             max-width: 900px; 
             margin: 0 auto; 
-            padding: 0 20px; 
+            padding: 0 12px; 
         }
         
         /* Profile Section - Compact Layout */
@@ -112,7 +113,7 @@
             margin-bottom: 20px;
             color: #666;
             font-size: 0.95em;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         .contact-info i {
             width: 18px;
@@ -120,30 +121,32 @@
             margin-right: 6px;
         }
         .contact-info a { 
-            color: #333;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s;
+            color: #0066cc;
+            text-decoration: underline;
+            transition: opacity 0.3s;
         }
         .contact-info a:hover { 
-            border-bottom-color: #333;
+            opacity: 0.8;
         }
         .social-links { 
             display: flex; 
-            gap: 12px; 
-            font-size: 1.3em;
+            gap: 15px; 
+            font-size: 0.95em;
+            flex-wrap: wrap;
         }
         .social-links a { 
-            color: #666;
-            transition: color 0.3s;
+            color: #0066cc;
+            text-decoration: underline;
+            transition: opacity 0.3s;
+            font-weight: 500;
         }
         .social-links a:hover { 
-            color: #000;
+            opacity: 0.8;
         }
         
         /* About Section - Compact */
         .about-section { 
-            padding: 20px 0 40px;
+            padding: 20px 0 25px;
             border-top: 1px solid #eee;
         }
         .about-section h2 {
@@ -155,16 +158,16 @@
         .about-section p { 
             margin-bottom: 12px;
             font-size: 1em;
-            line-height: 1.7;
+            line-height: 1.5;
             color: #555;
+            text-align: justify;
         }
         .about-section a {
-            color: #333;
-            text-decoration: none;
-            border-bottom: 1px solid #ddd;
+            color: #0066cc;
+            text-decoration: underline;
         }
         .about-section a:hover {
-            border-bottom-color: #333;
+            opacity: 0.8;
         }
         .phd-notice {
             background: #fff8e1;
@@ -173,7 +176,7 @@
             margin: 25px 0;
             font-size: 1em;
             color: #333;
-            line-height: 1.7;
+            line-height: 1.5;
         }
         .phd-notice strong {
             display: block;
@@ -181,17 +184,46 @@
             font-size: 1.05em;
         }
         .phd-notice a {
-            color: #333;
+            color: #0066cc;
             font-weight: 600;
-            border-bottom: 2px solid #ffa726;
+            text-decoration: underline;
         }
         .phd-notice a:hover {
-            border-bottom-color: #f57c00;
+            opacity: 0.8;
+        }
+        
+        /* News Section */
+        .news-section {
+            padding: 20px 0 25px;
+            border-top: 1px solid #eee;
+        }
+        .news-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #000;
+        }
+        .news-item {
+            margin-bottom: 10px;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #555;
+        }
+        .news-item strong {
+            color: #333;
+            font-weight: 600;
+        }
+        .news-item a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        .news-item a:hover {
+            opacity: 0.8;
         }
         
         /* Publications */
         .publications-section {
-            padding: 25px 0 40px;
+            padding: 20px 0 25px;
             border-top: 1px solid #eee;
         }
         .publications-section h2 {
@@ -215,7 +247,7 @@
         
         /* Services Section */
         .services-section {
-            padding: 25px 0 40px;
+            padding: 20px 0 25px;
             border-top: 1px solid #eee;
         }
         .services-section h2 {
@@ -227,7 +259,7 @@
         .services-content p {
             margin-bottom: 12px;
             font-size: 1em;
-            line-height: 1.7;
+            line-height: 1.5;
             color: #555;
         }
         
@@ -245,7 +277,7 @@
         .misc-content p {
             margin-bottom: 15px;
             font-size: 1em;
-            line-height: 1.7;
+            line-height: 1.5;
             color: #555;
         }
         .pub-image {
@@ -337,7 +369,10 @@
                 height: 200px; 
             }
             h1 { font-size: 1.7em; }
-            .social-links { justify-content: center; }
+            .social-links { 
+                justify-content: center; 
+                gap: 10px;
+            }
             .contact-info { text-align: center; }
             .publication {
                 grid-template-columns: 1fr;
@@ -357,6 +392,7 @@
             <a href="#" class="nav-logo">Yibo Peng</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#misc">Misc</a></li>
@@ -376,14 +412,19 @@
                     
                     <div class="contact-info">
                         <div><i class="fas fa-map-marker-alt"></i>Pittsburgh, Pennsylvania</div>
-                        <div><i class="fas fa-envelope"></i><a href="mailto:yibopcmu@gmail.com">yibopcmu@gmail.com</a></div>
+                        <!-- <div><i class="fas fa-envelope"></i><a href="mailto:yibopcmu@gmail.com">yibopcmu@gmail.com</a></div> -->
                     </div>
                     
                     <div class="social-links">
-                        <a href="https://github.com/pppyb" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/yibo-peng-cs/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/BrynnPeng" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=QiPV_zEAAAAJ&view_op=list_works&gmla=AH8HC4xMtLlTXApSME-5cPbnZZN0OqBxMvxamUkH8jBLWWzpRsPBe8uFSL8JBgLbQH8qHq9WgfVsRXC0iUntgV8W" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="mailto:yibopcmu@gmail.com">Email</a>
+                        <span>/</span>
+                        <a href="https://scholar.google.com/citations?hl=en&user=QiPV_zEAAAAJ&view_op=list_works&gmla=AH8HC4xMtLlTXApSME-5cPbnZZN0OqBxMvxamUkH8jBLWWzpRsPBe8uFSL8JBgLbQH8qHq9WgfVsRXC0iUntgV8W">Google Scholar</a>
+                        <span>/</span>
+                        <a href="https://github.com/pppyb">GitHub</a>
+                        <span>/</span>
+                        <a href="https://www.linkedin.com/in/yibo-peng-cs/">LinkedIn</a>
+                        <span>/</span>
+                        <a href="https://twitter.com/BrynnPeng">Twitter</a>
                     </div>
                 </div>
                 <div class="profile-image-col">
@@ -395,15 +436,52 @@
         <!-- About Section -->
         <section id="about" class="about-section">
             <h2>About</h2>
-            <p>I am <strong>Yibo Peng</strong>, a Research Assistant at <strong>Carnegie Mellon University</strong>. Advised by Prof. <a href="https://www.andrew.cmu.edu/user/beidic/"><strong>Beidi Chen</strong></a>, my research focuses on the <a href="https://github.com/Infini-AI-Lab/FCV">security of AI agents</a>. I also collaborate with Prof. <a href="https://www.huaxiuyao.io/"><strong>Huaxiu Yao</strong></a> on <a href="https://arxiv.org/pdf/2506.00555">multimodel large language models</a> and with Prof. <a href="https://www.phontron.com/"><strong>Graham Neubig</strong></a> on code agents through the <a href="https://github.com/OpenHands/OpenHands">OpenHands</a> project. 
-
-            <p>I recently received my <strong>Master's degree in Artificial Intelligence Engineering</strong> from <strong>Carnegie Mellon University</strong>. During my studies, I had the privilege of being advised by Prof. <a href="https://dpfried.github.io/"><strong>Daniel Fried</strong></a>, with a focus on <a href="https://openreview.net/pdf?id=pmcWo9DtDw"><strong>Code Generation</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong></a>.</p>
-
-            <p>My research interests lie in addressing the core challenges for AI agents: <strong>enhancing their multimodal reasoning capabilities in complex environments</strong>, <strong>optimizing the efficiency of multi-agent collaboration</strong>, and <strong>ensuring the safety of their behavior</strong>.</p>
+          
+            <p>
+              I am <strong>Yibo Peng</strong>, a Research Assistant at <strong>Carnegie Mellon University</strong>. 
+              Advised by Prof. <a href="https://www.andrew.cmu.edu/user/beidic/">Beidi Chen</a>, 
+              my research focuses on the <strong><a href="https://github.com/Infini-AI-Lab/FCV">AI security in real-world applications</a></strong>. 
+              I am also expanding my research through upcoming collaborations with Prof. 
+              <a href="https://people.eecs.berkeley.edu/~daw/">David Wagner</a> (UC Berkeley) and Prof. 
+              <a href="https://aisecure.github.io/">Bo Li</a> (UIUC), and I actively collaborate with Prof. 
+              <a href="https://www.huaxiuyao.io/">Huaxiu Yao</a> on 
+              <strong><a href="https://arxiv.org/pdf/2506.00555">multimodal large language models</a></strong>.
+            </p>
+          
+            <p>
+              I obtained my Master's degree in Artificial Intelligence Engineering from CMU. 
+              During my graduate studies, I worked under the supervision of Prof. 
+              <a href="https://dpfried.github.io/">Daniel Fried</a>, focusing on 
+              <strong><a href="https://openreview.net/pdf?id=pmcWo9DtDw">code generation</a></strong> and 
+              <strong>RAG</strong>. 
+              Additionally, I contributed to the 
+              <a href="https://github.com/OpenHands/OpenHands">OpenHands</a> project (focusing on <strong>code agents</strong>) under the mentorship of Prof. 
+              <a href="https://www.phontron.com/">Graham Neubig</a>.
+            </p>
+          
+            <p>
+                Broadly, my research aims to address core challenges for AI agents: 
+                enhancing <strong>multimodal reasoning</strong>, 
+                optimizing <strong>collaboration</strong>, and 
+                ensuring <strong>safety and reliability</strong>.
+            </p>
 
             <div class="phd-notice">
                 <strong>🎓 I am actively seeking Ph.D. opportunities for Fall 2026.</strong>
                 If you are interested in my work or potential collaborations, please feel free to contact me at <a href="mailto:yibopcmu@gmail.com">yibopcmu@gmail.com</a>.
+            </div>
+        </section>
+        <!-- News Section -->
+        <section id="news" class="news-section">
+            <h2>News</h2>
+            <div class="news-item">
+                <strong>[Jan 2026]</strong> 🔥 I will join <strong>UC Berkeley</strong> in <strong><a href="https://bair.berkeley.edu/">BAIR</a></strong> as a researcher, advised by Prof. <a href="https://people.eecs.berkeley.edu/~daw/">David Wagner</a> and PhD. <a href="https://sizhe-chen.github.io/">Sizhe Chen</a>.
+            </div>
+            <div class="news-item">
+                <strong>[Dec 2025]</strong> 🔥 I will attend <strong>NeurIPS 2025</strong> in San Diego, CA. Excited to catch up with old and new friends!
+            </div>
+            <div class="news-item">
+                <strong>[Nov 2025]</strong> 🔥 We released our work <strong><a href="assets/pdf/view.pdf">When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?</a></strong>
             </div>
         </section>
 
@@ -414,7 +492,7 @@
                 <div></div>
                 <div class="pub-content">
                     <div class="pub-title">Context-Contrastive Reinforcement Learning for Robust MLLM Reading</div>
-                    <div class="pub-authors"><strong><u>Yibo Peng</u></strong>*, Peng Xia*, Ding Zhong*, Kaide Zeng, Siwei Han, Yiyang Zhou, Jiaqi Liu, Ruiyi Zhang, Ruiyi Zhang, Huaxiu Yao</div>
+                    <div class="pub-authors"><strong><u>Yibo Peng</u></strong>*, Peng Xia*, Ding Zhong*, Kaide Zeng, Siwei Han, Yiyang Zhou, Jiaqi Liu, Ruiyi Zhang, Huaxiu Yao</div>
                     <div class="pub-venue">Submitted to CVPR 2026</div>
                 </div>
             </div>
